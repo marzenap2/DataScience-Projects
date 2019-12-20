@@ -1,0 +1,50 @@
+Data Definitions:
+
+The following real-world Uverse data gives information about the viewers of several TV shows. The information included about a particular view is gender, age, household income code, and observation status of a given TV show. A positive observation (‘1’) indicates that the particular viewer watched the given show, while a negative observation (‘0’) indicates they do not watch the show. There are six shows captured for each viewer. Each field is separated by a pipe (‘|’). The data is available here. Note: Click the download file icon at top right. The preview feature doesn't work but it will download - takes some time due to file size.
+
+
+Column Titles
+PERSON_GENDER_CD | PERSON_AGE_NBR | HOUSEHOLD_INCOME_ID | DOG_WHISPERER | DOGS_101 | CATS_101 | BAD_DOG | PUPPIES_VS_BABIES | PUPPY_BOWL
+
+
+Sample Data
+1|47|C|1|0|0|0|0|0
+1|51|D|0|0|0|0|0|0
+1|26|9|0|0|0|0|0|0
+
+
+Format the data
+Gender Code
+Valid Gender Codes:
+1-3 where
+        1 = Male
+        2 = Female
+        3 = Unknown
+
+All other values in gender code should be cleaned up by either removing them or adding them to Unknown
+
+Income Level Code
+Valid Income Level Codes:
+    0-9, A-D
+Invalid Income Level Codes:
+    NA
+
+TV Shows
+Valid values:
+    1 = Positive Observation
+    0 = Negative Observation
+
+Questions
+    How many viewers have the income code 4?
+    How many females are in the population?
+    What is the median age?
+    What is the mode of the income level code?
+    How many viewers are under the age of 18?
+
+Predictive Models
+Regression
+    Create a linear model to showing the relationship between a viewer’s age and the total number of TV shows watched.
+
+Classification / Clustering
+    Create a cluster about each show (might be best to do a subset for each TV show) to show which age/age range is most likely to watch that show.
+    Create a cluster showing which gender code is more likely to have a certain income level. Hint: you can take a similar approach to question 1 for the graphs or you can find a way to put all income codes in 1 graph.
